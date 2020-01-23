@@ -74,8 +74,8 @@ function SEO({ description, lang, meta, title }) {
 
 SEO.defaultProps = {
   lang: `en`,
-  meta: [],
-  description: ``,
+  meta: ['landing page'],
+  description: `Landing page for huddle company. Some crazy and cool section curves involved.`,
 }
 
 SEO.propTypes = {

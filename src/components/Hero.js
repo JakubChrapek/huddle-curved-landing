@@ -4,6 +4,7 @@ import Media from "react-media"
 import { colors } from "../utils/colors"
 import Button from "../components/Button"
 import Mockups from "../../static/screen-mockups.svg"
+import H2 from "../components/H2"
 
 const StyledHeroWrapper = styled.div`
   display: flex;
@@ -19,15 +20,6 @@ const StyledHero = styled.div`
   text-align: center;
   justify-content: center;
   align-items: center;
-`
-
-const StyledH2 = styled.h2`
-  color: ${colors.headerBlack};
-  font-size: 2.5rem;
-  line-height: 3rem;
-  letter-spacing: -1px;
-  margin-bottom: 2rem;
-  text-transform: capitalize;
 `
 
 const StyledP = styled.p`
@@ -46,7 +38,7 @@ const StyledImg = styled.img`
 const Hero = () => (
   <StyledHeroWrapper>
     <StyledHero>
-      <StyledH2>Build the community your fans will love</StyledH2>
+      <H2>Build the community your fans will love</H2>
       <StyledP>
         Huddle re-imagines the way we build communities. You have a voice, but
         so does your audience. Create connections with your users as you engage

@@ -28,5 +28,20 @@ module.exports = {
         icon: `src/images/favicon-32x32.png`,
       },
     },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Poppins`,
+            variants: [`700`],
+          },
+          {
+            family: `Open Sans`,
+            variants: [`400`, `600`, `700`],
+          },
+        ],
+      },
+    },
   ],
 }

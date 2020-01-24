@@ -7,8 +7,8 @@ const StyledSection = styled.div`
   justify-content: space-between;
   align-items: center;
   background-color: ${props => props.bgColor || colors.white};
-  margin: 6rem auto 3rem;
-  max-width: 1040px;
+  margin: ${props => (props.noMargin ? `0` : `6rem auto 3rem`)};
+  max-width: 1140px;
 `
 
 const textColumn = styled.div`
@@ -21,8 +21,10 @@ const textColumn = styled.div`
 const imageColumn = styled(textColumn)`
   text-align: unset;
 `
-const Section = ({ children, bgColor }) => (
-  <StyledSection>{children}</StyledSection>
+const Section = ({ children, bgColor, noMargin }) => (
+  <StyledSection bgColor={bgColor} noMargin={noMargin}>
+    {children}
+  </StyledSection>
 )
 
 export default Section

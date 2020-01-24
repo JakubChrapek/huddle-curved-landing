@@ -5,7 +5,7 @@ import { colors } from "../utils/colors"
 const StyledButton = styled.button`
   background-color: ${props => props.bgColor || "transparent"};
   color: ${props => props.textColor || colors.pink};
-  font-size: ${props => (props.bigger ? "1.05rem" : "0.9rem")};
+  font-size: ${props => (props.bigger ? "1.15rem" : "0.9rem")};
   font-weight: ${props => (props.bigger ? "600" : "400")};
   padding: ${props => (props.bigger ? "1.5rem 5.8rem" : "0.45rem 1.6rem")};
   border: 1px solid ${props => props.borderColor || colors.pink};
@@ -17,7 +17,7 @@ const StyledButton = styled.button`
 
   position: relative;
   display: inline-block;
-  max-width: 22rem;
+  max-width: 24rem;
   overflow: hidden;
   border-radius: 2rem;
   text-transform: capitalize;

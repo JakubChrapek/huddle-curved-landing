@@ -24,8 +24,9 @@ const StyledHero = styled.div`
 
 const StyledP = styled.p`
   color: ${colors.textBlack};
-  font-size: 1.05rem;
-  line-height: 1.6rem;
+  font-weight: 400;
+  font-size: 1.175rem;
+  line-height: 1.75rem;
   width: 60%;
   min-width: 500px;
   margin-bottom: 2.4rem;

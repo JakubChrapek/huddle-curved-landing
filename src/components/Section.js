@@ -6,7 +6,7 @@ const StyledSection = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: ${props => props.bgColor || colors.white};
+  background-color: ${props => `#${props.bgColor}` || colors.white};
   margin: ${props => (props.noMargin ? `0` : `6rem auto 3rem`)};
   max-width: 1140px;
 `

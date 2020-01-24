@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    font-size: 18px; 
+    font-size: 0; 
     padding: 0;
     margin: 0;
   }

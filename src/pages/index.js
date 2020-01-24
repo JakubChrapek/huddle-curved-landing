@@ -8,6 +8,8 @@ import H2 from "../components/H2"
 import H3 from "../components/H3"
 import P from "../components/P"
 import growImage from "../../static/illustration-grow-together.svg"
+import growBgTop from "../../static/bg-section-top-desktop-1.svg"
+import growBgBottom from "../../static/bg-section-bottom-desktop-1.svg"
 import iconCommunities from "../../static/icon-communities.svg"
 import iconMessages from "../../static/icon-messages.svg"
 import { colors } from "../utils/colors"
@@ -24,12 +26,19 @@ const CenteredDiv = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  background-color: ${props => `#${props.bgColor}` || colors.white};
 `
 
 const StyledIllustration = styled.img`
   max-width: 100%;
   width: 90%;
 `
+
+const StyledSVGImage = styled.img`
+  width: 100%;
+`
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
@@ -58,19 +67,23 @@ const IndexPage = () => (
         </CenteredDiv>
       </TextColumn>
     </Section>
-    <Section>
-      <TextColumn left>
-        <H2>Grow Together</H2>
-        <P>
-          Generate meaningful discussions with your audience and build a strong,
-          loyal community. Think of the insightful conversations you miss out on
-          with a feedback form.
-        </P>
-      </TextColumn>
-      <TextColumn right>
-        <StyledIllustration src={growImage} alt="Grow Illustration" />
-      </TextColumn>
-    </Section>
+    <StyledSVGImage src={growBgTop} alt="" />
+    <CenteredDiv bgColor={colors.sectionBlue}>
+      <Section>
+        <TextColumn left>
+          <H2>Grow Together</H2>
+          <P>
+            Generate meaningful discussions with your audience and build a
+            strong, loyal community. Think of the insightful conversations you
+            miss out on with a feedback form.
+          </P>
+        </TextColumn>
+        <TextColumn right>
+          <StyledIllustration src={growImage} alt="Grow Illustration" />
+        </TextColumn>
+      </Section>
+    </CenteredDiv>
+    <StyledSVGImage src={growBgBottom} alt="" />
   </Layout>
 )
 

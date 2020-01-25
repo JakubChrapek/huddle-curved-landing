@@ -8,13 +8,19 @@ const StyledH3 = styled.h3`
   line-height: ${props => (props.bigger ? "3.2rem" : "1.6rem")};
   letter-spacing: 0px;
   margin-bottom: 2rem;
-  text-transform: capitalize;
+  text-transform: ${props => (props.uppercase ? `uppercase` : `capitalize`)};
   font-family: ${props =>
     props.open ? `"Open Sans", sans-serif` : `"Poppins", sans-serif`};
 `
 
-const H3 = ({ children, bigger, light, textColor, open }) => (
-  <StyledH3 bigger={bigger} color={textColor} light={light} open={open}>
+const H3 = ({ children, bigger, light, textColor, open, uppercase }) => (
+  <StyledH3
+    bigger={bigger}
+    color={textColor}
+    light={light}
+    open={open}
+    uppercase={uppercase}
+  >
     {children}
   </StyledH3>
 )

@@ -1,7 +1,6 @@
 import React from "react"
 import Section from "../components/Section"
 import TextColumn from "../components/TextColumn"
-import styled from "styled-components"
 import H2 from "../components/H2"
 import P from "../components/P"
 import CenteredDiv from "../components/CenteredDiv"

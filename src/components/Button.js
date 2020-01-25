@@ -19,7 +19,7 @@ const StyledButton = styled.button`
   display: inline-block;
   max-width: 24rem;
   overflow: hidden;
-  border-radius: 2rem;
+  border-radius: ${props => (props.smallRadius ? `0.2rem` : `2rem`)};
   text-transform: capitalize;
   cursor: pointer;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
@@ -65,6 +65,7 @@ const Button = ({
   borderColor,
   bigger,
   shadow,
+  smallRadius,
 }) => (
   <>
     <StyledButton
@@ -73,6 +74,7 @@ const Button = ({
       borderColor={borderColor}
       bigger={bigger}
       shadow={shadow}
+      smallRadius={smallRadius}
     >
       {children}
     </StyledButton>

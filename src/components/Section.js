@@ -7,22 +7,33 @@ const StyledSection = styled.div`
   justify-content: space-between;
   align-items: center;
   background-color: ${props => `#${props.bgColor}` || colors.white};
-  margin: ${props => (props.noMargin ? `0` : `6rem auto 3rem`)};
+  margin: ${props => {
+    if (props.noMargin) {
+      return `0`
+    } else if (props.smallerMargin) {
+      return `2rem auto`
+    } else if (props.biggerMargin) {
+      return `10rem auto 8rem`
+    } else {
+      return `6rem auto`
+    }
+  }};
   max-width: 1140px;
 `
 
-const textColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: ${props => (props.right ? "right" : "left")};
-  width: 50%;
-`
-
-const imageColumn = styled(textColumn)`
-  text-align: unset;
-`
-const Section = ({ children, bgColor, noMargin }) => (
-  <StyledSection bgColor={bgColor} noMargin={noMargin}>
+const Section = ({
+  children,
+  bgColor,
+  noMargin,
+  smallerMargin,
+  biggerMargin,
+}) => (
+  <StyledSection
+    bgColor={bgColor}
+    noMargin={noMargin}
+    smallerMargin={smallerMargin}
+    biggerMargin={biggerMargin}
+  >
     {children}
   </StyledSection>
 )

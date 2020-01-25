@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import Media from "react-media"
 import { colors } from "../utils/colors"
 import Button from "../components/Button"
 import Mockups from "../../static/screen-mockups.svg"

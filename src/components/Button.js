@@ -46,7 +46,7 @@ const StyledButton = styled.button`
 
   :hover {
     color: ${props =>
-      props.textColor == colors.white ? colors.white : colors.hoverPink};
+      props.textColor === colors.white ? colors.white : colors.hoverPink};
     border: 1px solid ${colors.hoverPink};
   }
   :hover:after {

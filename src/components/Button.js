@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { colors } from "../utils/colors"
+import { motion } from "framer-motion"
 
 const StyledButton = styled.button`
   background-color: ${props => props.bgColor || "transparent"};
@@ -92,18 +93,16 @@ const Button = ({
   shadow,
   smallRadius,
 }) => (
-  <>
-    <StyledButton
-      bgColor={bgColor}
-      textColor={textColor}
-      borderColor={borderColor}
-      bigger={bigger}
-      shadow={shadow}
-      smallRadius={smallRadius}
-    >
-      {children}
-    </StyledButton>
-  </>
+  <StyledButton
+    bgColor={bgColor}
+    textColor={textColor}
+    borderColor={borderColor}
+    bigger={bigger}
+    shadow={shadow}
+    smallRadius={smallRadius}
+  >
+    {children}
+  </StyledButton>
 )
 
 export default Button

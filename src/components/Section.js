@@ -5,7 +5,6 @@ import { colors } from "../utils/colors"
 const StyledSection = styled.div`
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   align-items: ${props => (props.top ? `flex-start` : `center`)};
   background-color: ${props => `${props.bgColor}` || colors.white};
   margin: ${props => {
@@ -35,6 +34,7 @@ const StyledSection = styled.div`
   }
 
   @media (max-width: 768px) {
+    flex-wrap: wrap;
     margin: ${props => {
       if (props.noMargin) {
         return `0`

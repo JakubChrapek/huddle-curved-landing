@@ -19,6 +19,33 @@ const StyledSection = styled.div`
     }
   }};
   max-width: 1140px;
+  @media (max-width: 1140px) {
+    margin: ${props => {
+      if (props.noMargin) {
+        return `0`
+      } else if (props.smallerMargin) {
+        return `2rem 3rem`
+      } else if (props.biggerMargin) {
+        return `10rem 3rem 8rem`
+      } else {
+        return `6rem 3rem`
+      }
+    }};
+  }
+
+  @media (max-width: 768px) {
+    margin: ${props => {
+      if (props.noMargin) {
+        return `0`
+      } else if (props.smallerMargin) {
+        return `2rem`
+      } else if (props.biggerMargin) {
+        return `10rem 2rem 8rem`
+      } else {
+        return `6rem 2rem`
+      }
+    }};
+  }
 `
 
 const Section = ({

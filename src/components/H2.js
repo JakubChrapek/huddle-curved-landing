@@ -11,6 +11,11 @@ const StyledH2 = styled.h2`
   text-transform: capitalize;
   font-family: ${props =>
     props.open ? `"Open Sans", sans-serif` : `"Poppins", sans-serif`};
+
+  @media (max-width: 768px) {
+    font-size: ${props => (props.bigger ? "4.2rem" : "1.7rem")};
+    line-height: ${props => (props.bigger ? "6rem" : "2.6rem")};
+  }
 `
 
 const H2 = ({ children, bigger, open }) => (

@@ -15,6 +15,11 @@ const StyledButton = styled.button`
         0px 5px 8px 0px rgba(0,0,0,0.15)`
       : `none`};
 
+  @media (max-width: 768px) {
+    font-size: ${props => (props.bigger ? "0.85rem" : "0.7rem")};
+    padding: ${props => (props.bigger ? "0.85rem 2.8rem" : "0.45rem 1.25rem")};
+  }
+
   position: relative;
   display: inline-block;
   max-width: 24rem;
@@ -33,6 +38,10 @@ const StyledButton = styled.button`
     right: ${props => (props.bigger ? "2.5rem" : "0.7rem")};
     background-color: ${props => props.textColor || colors.pink};
     transition: transform 0.2s ease-in-out;
+
+    @media (max-width: 768px) {
+      right: ${props => (props.bigger ? "2rem" : "0.5rem")};
+    }
   }
   :after {
     bottom: ${props => (props.bigger ? "calc(50% + 0.15rem)" : "50%")};
@@ -55,6 +64,22 @@ const StyledButton = styled.button`
 
   :hover:before {
     transform: translateX(0) rotate(-45deg);
+  }
+
+  @media (max-width: 768px) {
+    :hover:after {
+      transform: ${props =>
+        props.bigger
+          ? `translateX(0.7rem) rotate(45deg)`
+          : `translateX(0rem) rotate(45deg)`};
+    }
+
+    :hover:before {
+      transform: ${props =>
+        props.bigger
+          ? `translateX(0.7rem) rotate(-45deg)`
+          : `translateX(0rem) rotate(-45deg)`};
+    }
   }
 `
 

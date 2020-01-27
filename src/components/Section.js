@@ -48,6 +48,20 @@ const StyledSection = styled.div`
     }};
     margin-bottom: ${props => (props.noMarginBottom ? `0` : `6rem 2rem`)};
   }
+  @media (max-width: 368px) {
+    margin: ${props => {
+      if (props.noMargin) {
+        return `0`
+      } else if (props.smallerMargin) {
+        return `1rem`
+      } else if (props.biggerMargin) {
+        return `8rem 1rem 6rem`
+      } else {
+        return `5rem 1rem`
+      }
+    }};
+    margin-bottom: ${props => (props.noMarginBottom ? `0` : `5rem 1rem`)};
+  }
   margin-bottom: ${props => (props.noMarginBottom ? `0` : `6rem 3rem`)};
 `
 

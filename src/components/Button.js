@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { colors } from "../utils/colors"
-import { motion } from "framer-motion"
 
 const StyledButton = styled.button`
   background-color: ${props => props.bgColor || "transparent"};
@@ -19,6 +18,11 @@ const StyledButton = styled.button`
   @media (max-width: 768px) {
     font-size: ${props => (props.bigger ? "0.85rem" : "0.7rem")};
     padding: ${props => (props.bigger ? "0.8rem 2.8rem" : "0.3rem 1.1rem")};
+  }
+
+  @media (max-width: 368px) {
+    font-size: ${props => (props.bigger ? "0.85rem" : "0.7rem")};
+    padding: ${props => (props.bigger ? "0.8rem 1.2rem" : "0.3rem 1rem")};
   }
 
   position: relative;

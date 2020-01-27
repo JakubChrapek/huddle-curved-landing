@@ -14,6 +14,10 @@ const StyledReady = styled.div`
     text-align: center;
     margin: 5rem auto 16rem;
   }
+  @media (max-width: 568px) {
+    text-align: center;
+    margin: 4rem auto 6rem;
+  }
 `
 const Ready = () => (
   <StyledReady>

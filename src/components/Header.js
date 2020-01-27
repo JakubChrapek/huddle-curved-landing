@@ -31,6 +31,9 @@ const StyledWrapper = styled.div`
   @media (max-width: 768px) {
     margin: 0 2rem;
   }
+  @media (max-width: 368px) {
+    margin: 0 1rem;
+  }
 `
 
 const StyledImg = styled.img`

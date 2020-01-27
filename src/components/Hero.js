@@ -13,6 +13,9 @@ const StyledHeroWrapper = styled.div`
   @media (max-width: 768px) {
     margin: 7rem 2rem 0;
   }
+  @media (max-width: 368px) {
+    margin: 5rem 1rem;
+  }
 `
 
 const StyledHero = styled.div`

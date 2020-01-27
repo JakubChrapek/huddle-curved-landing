@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Section from "../components/Section"
 import TextColumn from "../components/TextColumn"
 import Button from "../components/Button"
+import ContactFrom from "../components/ContactForm"
 import Logo from "../../static/logo.svg"
 import Email from "../../static/icon-email.svg"
 import Phone from "../../static/icon-phone.svg"
@@ -20,12 +21,14 @@ const FooterWrapper = styled.div`
   background-color: ${props => props.bgColor || "white"};
 `
 const SquishedFooterText = styled.p`
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   letter-spacing: -0.5px;
   font-weight: 600;
   line-height: 1.4rem;
   color: ${colors.white};
-  margin-bottom: 1.8rem;
+  margin-bottom: 2.2rem;
+  width: 65%;
+  min-width: 325px;
 `
 
 const ContactList = styled.ul`
@@ -45,13 +48,12 @@ const StyledListItem = styled.li`
 `
 
 const StyledIcon = styled.img`
-  width: 1.2 rem;
-  height: 1.2 rem;
+  width: 1rem;
   vertical-align: middle;
 `
 
 const StyledLink = styled.a`
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: ${colors.white};
   text-decoration: none;
   margin-left: 1.2rem;
@@ -74,8 +76,9 @@ const StyledLink = styled.a`
   }
 `
 const WhiteLogo = styled.img`
+  width: 14rem;
   filter: brightness(0) invert(1);
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.6rem;
 `
 
 const StyledSocialList = styled.ul`
@@ -95,8 +98,8 @@ const StyledSocialIcon = styled.li`
   background-color: ${props => props.bgColor || colors.white};
   border-radius: 4px;
   margin: 3.5rem 1.6rem 0 0;
-  width: 2.2rem;
-  height: 2.2rem;
+  width: 1.9rem;
+  height: 1.9rem;
   text-align: center;
   cursor: pointer;
   transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out,
@@ -117,8 +120,8 @@ const StyledSocialIcon = styled.li`
   }
   svg {
     vertical-align: middle;
-    width: ${props => (props.bigger ? `2.5rem` : `1.6rem`)};
-    height: ${props => (props.bigger ? `2.5rem` : `1.6rem`)};
+    width: ${props => (props.bigger ? `2.5rem` : `1.4rem`)};
+    height: ${props => (props.bigger ? `2.5rem` : `1.4rem`)};
     path {
       fill: ${props =>
         props.bgColor ? `${colors.white}` : `${colors.darkCyan}`};
@@ -128,7 +131,7 @@ const StyledSocialIcon = styled.li`
 `
 
 const NewsletterHeader = styled.h3`
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   color: ${colors.white};
   text-transform: uppercase;
   font-weight: 700;
@@ -194,16 +197,7 @@ const Footer = () => (
             To recieve tips on how to grow your community, sign up to our weekly
             newsletter. We’ll never send you spam or pass on your email address
           </SquishedFooterText>
-          <form>
-            <Button
-              textColor={colors.white}
-              bgColor={colors.pink}
-              borderColor={colors.pink}
-              smallRadius
-            >
-              Subscribe
-            </Button>
-          </form>
+          <ContactFrom />
         </TextColumn>
       </Section>
     </FooterWrapper>

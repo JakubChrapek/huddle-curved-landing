@@ -11,18 +11,25 @@ import { colors } from "../utils/colors"
 
 const StyledIcon = styled.img`
   width: 2.6rem;
-  align-self: flex-start;
+  /* align-self: flex-start; */
   margin-bottom: 1rem;
+`
+
+const StyledDiv = styled.div`
+  display: flex;
+  flex-direction: column;
 `
 
 const Numbers = () => (
   <Section>
     <TextColumn>
       <CenteredDiv>
-        <StyledIcon src={iconCommunities} alt="Communities Icon" />
-        <H2 bigger open>
-          1.4k+
-        </H2>
+        <StyledDiv>
+          <StyledIcon src={iconCommunities} alt="Communities Icon" />
+          <H2 bigger open>
+            1.4k+
+          </H2>
+        </StyledDiv>
         <H3 light textColor={colors.gray} open>
           Communities formed
         </H3>
@@ -30,10 +37,12 @@ const Numbers = () => (
     </TextColumn>
     <TextColumn>
       <CenteredDiv>
-        <StyledIcon src={iconMessages} alt="Messages Icon" />
-        <H2 bigger open>
-          2.7m+
-        </H2>
+        <StyledDiv>
+          <StyledIcon src={iconMessages} alt="Messages Icon" />
+          <H2 bigger open>
+            2.7m+
+          </H2>
+        </StyledDiv>
         <H3 light textColor={colors.gray} open>
           Messages sent
         </H3>

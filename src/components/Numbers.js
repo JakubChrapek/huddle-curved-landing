@@ -11,8 +11,11 @@ import { colors } from "../utils/colors"
 
 const StyledIcon = styled.img`
   width: 2.6rem;
-  /* align-self: flex-start; */
   margin-bottom: 1rem;
+  @media (max-width: 767px) {
+    margin-bottom: 0.2rem;
+    width: 1.9rem;
+  }
 `
 
 const StyledDiv = styled.div`
@@ -21,7 +24,7 @@ const StyledDiv = styled.div`
 `
 
 const Numbers = () => (
-  <Section>
+  <Section noMarginBottom>
     <TextColumn>
       <CenteredDiv>
         <StyledDiv>

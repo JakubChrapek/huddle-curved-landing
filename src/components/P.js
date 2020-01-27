@@ -7,6 +7,10 @@ const StyledP = styled.p`
   line-height: 1.5rem;
   color: ${colors.textBlack};
   letter-spacing: -0.02rem;
+  @media (max-width: 767px) {
+    font-size: 0.9rem;
+    line-height: 1.25rem;
+  }
 `
 
 const P = ({ children }) => <StyledP>{children}</StyledP>

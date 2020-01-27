@@ -11,6 +11,11 @@ const StyledH3 = styled.h3`
   text-transform: ${props => (props.uppercase ? `uppercase` : `capitalize`)};
   font-family: ${props =>
     props.open ? `"Open Sans", sans-serif` : `"Poppins", sans-serif`};
+
+  @media (max-width: 767px) {
+    font-size: ${props => (props.bigger ? "3rem" : "0.95rem")};
+    margin-bottom: 3rem;
+  }
 `
 
 const H3 = ({ children, bigger, light, textColor, open, uppercase }) => (

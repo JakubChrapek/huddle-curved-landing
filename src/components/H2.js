@@ -13,13 +13,30 @@ const StyledH2 = styled.h2`
     props.open ? `"Open Sans", sans-serif` : `"Poppins", sans-serif`};
 
   @media (max-width: 768px) {
-    font-size: ${props => (props.bigger ? "4.2rem" : "1.7rem")};
-    line-height: ${props => (props.bigger ? "6rem" : "2.6rem")};
+    font-size: ${props => {
+      if (props.bigger) {
+        return `3.7rem`
+      } else if (props.smaller) {
+        return `1.25rem`
+      } else {
+        return `1.6rem`
+      }
+    }};
+    line-height: ${props => {
+      if (props.bigger) {
+        return `4rem`
+      } else if (props.smaller) {
+        return `2rem`
+      } else {
+        return `2.4rem`
+      }
+    }};
+    margin-bottom: ${props => (props.smaller ? `0.5rem` : `1rem`)};
   }
 `
 
-const H2 = ({ children, bigger, open }) => (
-  <StyledH2 bigger={bigger} open={open}>
+const H2 = ({ children, bigger, open, smaller }) => (
+  <StyledH2 bigger={bigger} open={open} smaller={smaller}>
     {children}
   </StyledH2>
 )

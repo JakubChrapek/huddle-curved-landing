@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import Section from "../components/Section"
 import TextColumn from "../components/TextColumn"
-import Button from "../components/Button"
 import ContactFrom from "../components/ContactForm"
 import Logo from "../../static/logo.svg"
 import Email from "../../static/icon-email.svg"
@@ -10,6 +9,7 @@ import Phone from "../../static/icon-phone.svg"
 import { colors } from "../utils/colors"
 import SVGImage from "../components/SVGImage"
 import bgFooterDesktop from "../../static/bg-footer-top-desktop.svg"
+import bgFooterMobile from "../../static/bg-footer-top-mobile.svg"
 import { FaFacebookF, FaRocket, FaInstagram } from "react-icons/fa"
 
 const FooterWrapper = styled.div`
@@ -29,12 +29,23 @@ const SquishedFooterText = styled.p`
   margin-bottom: 2.2rem;
   width: 65%;
   min-width: 325px;
+  @media (max-width: 767px) {
+    text-align: left;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    min-width: unset;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 `
 
 const ContactList = styled.ul`
   list-style-type: none;
   margin: 0;
   padding: 0;
+  @media (max-width: 767px) {
+    align-self: flex-start;
+  }
 `
 
 const StyledListItem = styled.li`
@@ -79,6 +90,11 @@ const WhiteLogo = styled.img`
   width: 14rem;
   filter: brightness(0) invert(1);
   margin-bottom: 1.6rem;
+  @media (max-width: 767px) {
+    width: 12rem;
+    align-self: flex-start;
+    margin-bottom: 1rem;
+  }
 `
 
 const StyledSocialList = styled.ul`
@@ -88,6 +104,9 @@ const StyledSocialList = styled.ul`
   justify-content: center;
   align-items: center;
   z-index: 1;
+  @media (max-width: 768px) {
+    align-self: flex-start;
+  }
 `
 
 const StyledSocialIcon = styled.li`
@@ -96,7 +115,7 @@ const StyledSocialIcon = styled.li`
   align-items: center;
   border: ${props => (props.bgColor ? `none` : `1px solid ${colors.white}`)};
   background-color: ${props => props.bgColor || colors.white};
-  border-radius: 4px;
+  border-radius: 2px;
   margin: 3.5rem 1.6rem 0 0;
   width: 1.9rem;
   height: 1.9rem;
@@ -128,6 +147,16 @@ const StyledSocialIcon = styled.li`
       transition: fill 0.2s ease-in-out;
     }
   }
+
+  @media (max-width: 768px) {
+    margin: 2.5rem 1.2rem 0 0;
+    width: 1.45rem;
+    height: 1.45rem;
+    svg {
+      width: ${props => (props.bigger ? `1.8rem` : `1rem`)};
+      height: ${props => (props.bigger ? `1.8rem` : `1rem`)};
+    }
+  }
 `
 
 const NewsletterHeader = styled.h3`
@@ -137,14 +166,20 @@ const NewsletterHeader = styled.h3`
   font-weight: 700;
   font-family: "Open Sans", sans-serif;
   margin-bottom: 1.9rem;
+  @media (max-width: 767px) {
+    font-size: 1.25rem;
+    align-self: flex-start;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
 `
 
 const Footer = () => (
   <>
-    <SVGImage src={bgFooterDesktop} alt="" />
+    <SVGImage src={bgFooterDesktop} srcMobile={bgFooterMobile} alt="" />
     <FooterWrapper bgColor={colors.darkCyan}>
-      <Section top>
-        <TextColumn left text>
+      <Section top smallerMargin>
+        <TextColumn left text marginTop="6rem">
           <WhiteLogo src={Logo} alt="Huddle" />
           <SquishedFooterText>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
@@ -191,7 +226,7 @@ const Footer = () => (
             </StyledSocialIcon>
           </StyledSocialList>
         </TextColumn>
-        <TextColumn right text>
+        <TextColumn right text first>
           <NewsletterHeader>Newsletter</NewsletterHeader>
           <SquishedFooterText>
             To recieve tips on how to grow your community, sign up to our weekly

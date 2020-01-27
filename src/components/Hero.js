@@ -11,7 +11,7 @@ const StyledHeroWrapper = styled.div`
   align-items: center;
   margin-top: 7rem;
   @media (max-width: 768px) {
-    margin: 5rem 2rem 0;
+    margin: 7rem 2rem 0;
   }
 `
 
@@ -39,8 +39,10 @@ const StyledP = styled.p`
   @media (max-width: 768px) {
     width: 100%;
     min-width: unset;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    font-weight: 600;
     line-height: 1.4rem;
+    margin-bottom: 3.2rem;
   }
 `
 
@@ -48,13 +50,18 @@ const StyledImg = styled.img`
   margin-top: 5.4rem;
   max-width: 100%;
   @media (max-width: 1140px) {
-    width: calc(100% - 6rem);
+    width: calc(100% - 1rem);
+    margin-top: 7rem;
   }
 `
 const Hero = () => (
   <StyledHeroWrapper>
     <StyledHero>
-      <H2>Build the community your fans will love</H2>
+      <H2>
+        Build the community
+        <br />
+        your fans will love
+      </H2>
       <StyledP>
         Huddle re-imagines the way we build communities. You have a voice, but
         so does your audience. Create connections with your users as you engage

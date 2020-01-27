@@ -10,6 +10,10 @@ const StyledReady = styled.div`
   justify-content: center;
   align-items: center;
   margin: 8rem auto;
+  @media (max-width: 767px) {
+    text-align: center;
+    margin: 5rem auto 16rem;
+  }
 `
 const Ready = () => (
   <StyledReady>

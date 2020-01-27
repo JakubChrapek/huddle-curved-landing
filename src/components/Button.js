@@ -17,7 +17,7 @@ const StyledButton = styled.button`
 
   @media (max-width: 768px) {
     font-size: ${props => (props.bigger ? "0.85rem" : "0.7rem")};
-    padding: ${props => (props.bigger ? "0.85rem 2.8rem" : "0.45rem 1.25rem")};
+    padding: ${props => (props.bigger ? "0.8rem 2.8rem" : "0.3rem 1.1rem")};
   }
 
   position: relative;

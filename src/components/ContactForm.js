@@ -4,7 +4,6 @@ import { colors } from "../utils/colors"
 
 const StyledForm = styled.form`
   display: flex;
-  flex-wrap: 0 0 wrap;
   width: 100%;
 
   > div {
@@ -19,6 +18,10 @@ const StyledForm = styled.form`
       color: ${colors.headerBlack};
       border: 2px solid ${colors.white};
       transition: border-color 0.15s ease-in-out;
+
+      @media (max-width: 767px) {
+        padding: 0.75rem 0.9rem;
+      }
 
       :hover::placeholder {
         color: ${colors.headerBlack};
@@ -40,6 +43,7 @@ const StyledForm = styled.form`
     border-radius: 5px;
     border: 2px solid ${colors.pink};
     background-color: ${colors.pink};
+    padding: 0.6rem 0.8rem;
     border: 0;
     color: ${colors.white};
     font-family: "Open Sans", sans-serif;
@@ -47,6 +51,11 @@ const StyledForm = styled.form`
     font-size: 0.88rem;
     cursor: pointer;
     transition: border-color 0.15s ease-in-out;
+
+    @media (max-width: 767px) {
+      padding: 0.75rem 0.9rem;
+      font-size: 0.95rem;
+    }
 
     :focus,
     :active {
@@ -78,6 +87,22 @@ const StyledForm = styled.form`
 
     :hover:before {
       transform: translateX(-0.6rem) rotate(-45deg);
+    }
+  }
+  @media (max-width: 767px) {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    > div {
+      width: 100%;
+      flex-grow: unset;
+      input {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+    }
+    > button {
+      width: 50%;
+      flex-grow: unset;
     }
   }
 `

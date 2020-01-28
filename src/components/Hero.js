@@ -60,11 +60,7 @@ const StyledImg = styled.img`
 const Hero = () => (
   <StyledHeroWrapper>
     <StyledHero>
-      <H2>
-        Build the community
-        <br />
-        your fans will love
-      </H2>
+      <H2>Build the community your fans will love</H2>
       <StyledP>
         Huddle re-imagines the way we build communities. You have a voice, but
         so does your audience. Create connections with your users as you engage
